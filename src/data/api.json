@@ -1,43 +1,42 @@
 {
-    "alumnos": [
-      {
-        "id": "1",
-        "nombre": "Pedro",
-        "localidad": "Madrid",
-        "fecha_de_nacimiento": "1990-01-01"
-      },
-      {
-        "id": "2",
-        "nombre": "Ana",
-        "localidad": "Barcelona",
-        "fecha_de_nacimiento": "1995-02-02"
-      },
-      {
-        "id": "3",
-        "nombre": "Juan",
-        "localidad": "Valencia",
-        "fecha_de_nacimiento": "1980-03-03"
-      }
-    ],
-
-    "profesores": [
-      {
-        "id": "1",
-        "nombre": "Rafael",
-        "especialidad": "Matematicas",
-        "estado_civil": "SOLTERO"
-      },
-      {
-        "id": "2",
-        "nombre": "David",
-        "especialidad": "Fisica",
-        "estado_civil": "CASADO"
-      },
-      {
-        "id": "3",
-        "nombre": "Carlos",
-        "especialidad": "Quimica",
-        "estado_civil": "VIUDO"
-      }
-    ]
-  }
+  "alumnos": [
+    {
+      "id": "2",
+      "nombre": "Ana",
+      "localidad": "Barcelona",
+      "fecha_de_nacimiento": "1995-02-02"
+    },
+    {
+      "nombre": "Juan",
+      "localidad": "Valencia",
+      "fecha_de_nacimiento": "1980-03-03",
+      "id": "3"
+    },
+    {
+      "id": "6d37",
+      "nombre": "Pedro",
+      "localidad": "Montilla",
+      "fecha_de_nacimiento": "1995-02-03"
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "nombre": "Rafael",
+      "especialidad": "Matematicas",
+      "estado_civil": "SOLTERO"
+    },
+    {
+      "id": "2",
+      "nombre": "David",
+      "especialidad": "Fisica",
+      "estado_civil": "CASADO"
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos",
+      "especialidad": "Quimica",
+      "estado_civil": "VIUDO"
+    }
+  ]
+}

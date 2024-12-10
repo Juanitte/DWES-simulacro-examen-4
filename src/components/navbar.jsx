@@ -1,19 +1,26 @@
 import { Logout } from "@/components/forms"
 import { logout } from "@/lib/actions"
+import Link from "next/link";
 
 export default function Navbar() {
     return (
         <>
             <div className="flex flex-row justify-around">
-                <a href="/homepage" className="text-decoration-none text-white p-4">
-                    Home
-                </a>
-                <a href="/alumnos-db" className="text-decoration-none text-white p-4">
-                    Database
-                </a>
-                <a href="/api-rest" className="text-decoration-none text-white p-4">
-                    API REST
-                </a>
+                <Link href="/homepage" className="text-decoration-none text-white p-4">
+                    Inicio
+                </Link>
+                <Link href="/alumnos-db" className="text-decoration-none text-white p-4">
+                    Alumnos BBDD
+                </Link>
+                <Link href="/alumnos-api" className="text-decoration-none text-white p-4">
+                    Alumnos API REST
+                </Link>
+                <Link href="/profesores-db" className="text-decoration-none text-white p-4">
+                    Profesores Database
+                </Link>
+                <Link href="/profesores-api" className="text-decoration-none text-white p-4">
+                    Profesores API REST
+                </Link>
                 <Logout action={logout}></Logout>
             </div>
         </>
