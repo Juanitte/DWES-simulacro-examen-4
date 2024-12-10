@@ -1,14 +1,31 @@
-import connection from "@/lib/mysql";
+import Alumnos from "@/components/db-alumnos";
+import AlumnoNuevo from "@/components/db-alumno-nuevo";
+import { Suspense } from "react";
+import Link from "next/link";
+import Fallback from "@/components/fallback";
+import Navbar from "@/components/navbar";
 
-const rows = await connection.query("SELECT * FROM alumnos");
 
-export default function AlumnosDb() {
+
+
+export default async function AlumnosPage({ searchParams }) {
+    const { query } = await searchParams;
+
+    // Introducimos un retardo artificial
+    // await new Promise(resolve => setTimeout(resolve, 2000))
+
     return (
-    <>
-        <i className="fa fa-user p-4" aria-hidden="true"></i> ALUMNOS
-        <div className="p-4 flex flex-col gap-4">
-          {rows[0].map(alumno => <p key={alumno.id}>{alumno.nombre}</p>)}
-        </div>
-      </>
+        <section className="min-h-screen max-w-[1024px] mx-auto px-10 py-10">
+            <Navbar></Navbar>
+            <h1 className='py-10 text-3xl text-blue-500 text-center border-b-4 border-b-blue-500'>
+                BASE DE DATOS
+            </h1>
+
+            <AlumnoNuevo />
+
+            <Suspense fallback={<Fallback>Obteniendo alumnos ... </Fallback>}>
+                <Alumnos query={query || ''} />
+            </Suspense>
+        </section>
     );
 }
